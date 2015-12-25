@@ -1,0 +1,58 @@
+[20-Dec-2015 02:03:27 UTC] База данных WordPress возвратила ошибку Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' в ответ на запрос SELECT repeat_count FROM wp_search_statistics WHERE keywords ='Начать поиск', выполненный require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('wp_loaded'), call_user_func_array, ss_keyword_trace, save_keyword, repeat_count
+[20-Dec-2015 02:03:27 UTC] База данных WordPress возвратила ошибку Unknown column 'meta_value_num' in 'where clause' в ответ на запрос select * from wp_postmeta where  meta_key='size' AND (  meta_value LIKE '28%45%' OR  meta_value_num LIKE  '28%43%'
+OR meta_value LIKE '29%45%' OR  meta_value LIKE '29%44%'
+OR meta_value LIKE '29%43%' OR  meta_value LIKE '27%44%'
+OR meta_value LIKE '27%45%' OR  meta_value LIKE '27%43%'
+OR meta_value LIKE '29%44%' OR  meta_value LIKE '28%45%'
+OR meta_value LIKE '28%43%' OR  meta_value LIKE '29%45%'
+OR meta_value LIKE '29%44%' OR  meta_value LIKE '29%43%'
+OR meta_value LIKE '27%44%' OR  meta_value LIKE '27%45%'
+OR meta_value LIKE '27%43%' OR  meta_value LIKE '28%45%'
+OR meta_value LIKE '28%43%' OR  meta_value LIKE  '29%45%'
+OR meta_value+0 LIKE '28.5%44%' OR  meta_value LIKE  '28%44%'
+
+) ORDER BY meta_value desc, выполненный require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/rti-baltics/search.php')
+[20-Dec-2015 04:28:37 UTC] База данных WordPress возвратила ошибку Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' в ответ на запрос SELECT repeat_count FROM wp_search_statistics WHERE keywords ='Начать поиск', выполненный require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('wp_loaded'), call_user_func_array, ss_keyword_trace, save_keyword, repeat_count
+[20-Dec-2015 04:28:37 UTC] База данных WordPress возвратила ошибку Unknown column 'meta_value_num' in 'where clause' в ответ на запрос select * from wp_postmeta where  meta_key='size' AND (  meta_value LIKE '20%41%' OR  meta_value_num LIKE  '20%39%'
+OR meta_value LIKE '21%41%' OR  meta_value LIKE '21%40%'
+OR meta_value LIKE '21%39%' OR  meta_value LIKE '19%40%'
+OR meta_value LIKE '19%41%' OR  meta_value LIKE '19%39%'
+OR meta_value LIKE '21%40%' OR  meta_value LIKE '20%41%'
+OR meta_value LIKE '20%39%' OR  meta_value LIKE '21%41%'
+OR meta_value LIKE '21%40%' OR  meta_value LIKE '21%39%'
+OR meta_value LIKE '19%40%' OR  meta_value LIKE '19%41%'
+OR meta_value LIKE '19%39%' OR  meta_value LIKE '20%41%'
+OR meta_value LIKE '20%39%' OR  meta_value LIKE  '21%41%'
+OR meta_value+0 LIKE '20.5%40%' OR  meta_value LIKE  '20%40%'
+
+) ORDER BY meta_value desc, выполненный require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/rti-baltics/search.php')
+[20-Dec-2015 04:50:40 UTC] База данных WordPress возвратила ошибку Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' в ответ на запрос SELECT repeat_count FROM wp_search_statistics WHERE keywords ='Начать поиск', выполненный require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('wp_loaded'), call_user_func_array, ss_keyword_trace, save_keyword, repeat_count
+[20-Dec-2015 05:05:18 UTC] База данных WordPress возвратила ошибку Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' в ответ на запрос SELECT repeat_count FROM wp_search_statistics WHERE keywords ='Начать поиск', выполненный require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('wp_loaded'), call_user_func_array, ss_keyword_trace, save_keyword, repeat_count
+[20-Dec-2015 05:05:18 UTC] База данных WordPress возвратила ошибку Unknown column 'meta_value_num' in 'where clause' в ответ на запрос select * from wp_postmeta where  meta_key='size' AND (  meta_value LIKE '28%43%' OR  meta_value_num LIKE  '28%41%'
+OR meta_value LIKE '29%43%' OR  meta_value LIKE '29%42%'
+OR meta_value LIKE '29%41%' OR  meta_value LIKE '27%42%'
+OR meta_value LIKE '27%43%' OR  meta_value LIKE '27%41%'
+OR meta_value LIKE '29%42%' OR  meta_value LIKE '28%43%'
+OR meta_value LIKE '28%41%' OR  meta_value LIKE '29%43%'
+OR meta_value LIKE '29%42%' OR  meta_value LIKE '29%41%'
+OR meta_value LIKE '27%42%' OR  meta_value LIKE '27%43%'
+OR meta_value LIKE '27%41%' OR  meta_value LIKE '28%43%'
+OR meta_value LIKE '28%41%' OR  meta_value LIKE  '29%43%'
+OR meta_value+0 LIKE '28.5%42%' OR  meta_value LIKE  '28%42%'
+
+) ORDER BY meta_value desc, выполненный require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/rti-baltics/search.php')
+[20-Dec-2015 05:25:44 UTC] База данных WordPress возвратила ошибку Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' в ответ на запрос SELECT repeat_count FROM wp_search_statistics WHERE keywords ='Начать поиск', выполненный require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('wp_loaded'), call_user_func_array, ss_keyword_trace, save_keyword, repeat_count
+[20-Dec-2015 05:25:44 UTC] База данных WordPress возвратила ошибку Unknown column 'meta_value_num' in 'where clause' в ответ на запрос select * from wp_postmeta where  meta_key='size' AND (  meta_value LIKE '40%53%' OR  meta_value_num LIKE  '40%51%'
+OR meta_value LIKE '41%53%' OR  meta_value LIKE '41%52%'
+OR meta_value LIKE '41%51%' OR  meta_value LIKE '39%52%'
+OR meta_value LIKE '39%53%' OR  meta_value LIKE '39%51%'
+OR meta_value LIKE '41%52%' OR  meta_value LIKE '40%53%'
+OR meta_value LIKE '40%51%' OR  meta_value LIKE '41%53%'
+OR meta_value LIKE '41%52%' OR  meta_value LIKE '41%51%'
+OR meta_value LIKE '39%52%' OR  meta_value LIKE '39%53%'
+OR meta_value LIKE '39%51%' OR  meta_value LIKE '40%53%'
+OR meta_value LIKE '40%51%' OR  meta_value LIKE  '41%53%'
+OR meta_value+0 LIKE '40.5%52%' OR  meta_value LIKE  '40%52%'
+
+) ORDER BY meta_value desc, выполненный require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/rti-baltics/search.php')
+[20-Dec-2015 06:14:43 UTC] База данных WordPress возвратила ошибку Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '=' в ответ на запрос SELECT repeat_count FROM wp_search_statistics WHERE keywords ='Начать поиск', выполненный require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('wp_loaded'), call_user_func_array, ss_keyword_trace, save_keyword, repeat_count

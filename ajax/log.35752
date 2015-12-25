@@ -1,0 +1,57 @@
+12:24:02.689385 --- SIGSTOP (Stopped (signal)) @ 0 (0) ---
+12:24:02.689448 --- SIGSTOP (Stopped (signal)) @ 0 (0) ---
+12:24:02.689548 socket(PF_FILE, SOCK_STREAM, 0) = 13
+12:24:02.689599 fcntl(13, F_GETFL)      = 0x2 (flags O_RDWR)
+12:24:02.689628 fcntl(13, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+12:24:02.689651 connect(13, {sa_family=AF_FILE, path="/var/run/mysqld/mysqld.sock"}, 29) = 0
+12:24:02.689711 fcntl(13, F_SETFL, O_RDWR) = 0
+12:24:02.689738 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.689800 recvfrom(13, "Y\0\0\0", 4, MSG_DONTWAIT, NULL, NULL) = 4
+12:24:02.689840 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.689866 recvfrom(13, "\n5.6.26-74.0-beget-log\0\301\23\21\0011w'U[J@B\0\377\367!\2\0\177\200\25\0\0\0\0\0\0\0\0\0\0hgM,0Nw.z?k{\0mysql_native_password\0", 93, MSG_DONTWAIT, NULL, NULL) = 89
+12:24:02.689917 sendto(13, "s\0\0\1\205\242\16\0\0\0\0\300!\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0rtibal4z_rtibaln\0\24c41\242\302\334D\243\374\344\264\177\216\321\340\372$\351\24\r\0mysql_native_password\0\25\f_client_name\7mysqlnd", 119, MSG_DONTWAIT, NULL, 0) = 119
+12:24:02.689956 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.690073 recvfrom(13, ",\0\0\2", 4, MSG_DONTWAIT, NULL, NULL) = 4
+12:24:02.690097 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.690122 recvfrom(13, "\376mysql_native_password\0001w'U[J@BhgM,0Nw.z?k{\0", 93, MSG_DONTWAIT, NULL, NULL) = 44
+12:24:02.690154 sendto(13, "\24\0\0\3c41\242\302\334D\243\374\344\264\177\216\321\340\372$\351\24\r", 24, MSG_DONTWAIT, NULL, 0) = 24
+12:24:02.690182 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.690209 recvfrom(13, "\7\0\0\4\0\0\0\2\0\0\0", 49, MSG_DONTWAIT, NULL, NULL) = 11
+12:24:02.690249 sendto(13, "\21\0\0\0\2rtibal4z_rtibaln", 21, MSG_DONTWAIT, NULL, 0) = 21
+12:24:02.690279 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.690305 recvfrom(13, "\7\0\0\1\0\0\0\2\0\0\0", 38, MSG_DONTWAIT, NULL, NULL) = 11
+12:24:02.690334 sendto(13, "\3\0\0\0\33\1\0", 7, MSG_DONTWAIT, NULL, 0) = 7
+12:24:02.690360 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.690384 recvfrom(13, "\5\0\0\1\376\0\0\2\0", 27, MSG_DONTWAIT, NULL, NULL) = 9
+12:24:02.690410 sendto(13, "\17\0\0\0\3set names utf8", 19, MSG_DONTWAIT, NULL, 0) = 19
+12:24:02.690437 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:02.690480 recvfrom(13, "\7\0\0\1\0\0\0\2\0\0\0", 18, MSG_DONTWAIT, NULL, NULL) = 11
+12:24:02.690518 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+12:24:02.690548 rt_sigaction(SIGCHLD, NULL, {SIG_DFL, [], 0}, 8) = 0
+12:24:02.690580 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+12:24:02.690603 nanosleep({1, 0}, 0x7ffd04a4ea60) = 0
+12:24:03.690754 sendto(13, "\206\0\0\0\3SELECT * \r\n    \t                   FROM city \r\n    \t                   WHERE region_id = 4925 \r\n    \t                   ORDER BY name", 138, MSG_DONTWAIT, NULL, 0) = 138
+12:24:03.690827 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:03.690945 recvfrom(13, "4\0\0\1\377z\4", 7, MSG_DONTWAIT, NULL, NULL) = 7
+12:24:03.690972 poll([{fd=13, events=POLLIN|POLLERR|POLLHUP}], 1, 1471228928) = 1 ([{fd=13, revents=POLLIN}])
+12:24:03.690998 recvfrom(13, "#42S02Table 'rtibal4z_rtibaln.city' doesn't exist", 93, MSG_DONTWAIT, NULL, NULL) = 49
+12:24:03.691069 chdir("/")              = 0
+12:24:03.691114 setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
+12:24:03.691334 getrusage(RUSAGE_SELF, {ru_utime={0, 6666}, ru_stime={0, 0}, ...}) = 0
+12:24:03.691399 socket(PF_FILE, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 14
+12:24:03.691428 connect(14, {sa_family=AF_FILE, path="/dev/log"}, 110) = 0
+12:24:03.691472 sendto(14, "<8>Dec  8 12:24:03 php: begethook rtibal4z__rtibal4z_bget_ru__81 rti-baltika.ru [BEGETHOOK_RUSAGE] uri /ajax/city.php utime 6666 stime 0 /home/r/rtibal4z/rtibal4z.bget.ru/public_html/ajax/city.php ++0  ", 202, MSG_NOSIGNAL, NULL, 0) = 202
+12:24:03.691532 fcntl(9, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+12:24:03.691576 rt_sigaction(SIGPIPE, {SIG_IGN, [PIPE], SA_RESTORER|SA_RESTART, 0x2ac524f31150}, {SIG_IGN, [], SA_RESTORER, 0x2ac524cedcb0}, 8) = 0
+12:24:03.691617 sendto(13, "\1\0\0\0\1", 5, MSG_DONTWAIT, NULL, 0) = 5
+12:24:03.691646 close(13)               = 0
+12:24:03.691681 rt_sigaction(SIGPIPE, {SIG_IGN, [PIPE], SA_RESTORER|SA_RESTART, 0x2ac524f31150}, {SIG_IGN, [PIPE], SA_RESTORER|SA_RESTART, 0x2ac524f31150}, 8) = 0
+12:24:03.691738 setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
+12:24:03.692191 read(12, 0x563645141278, 8000) = -1 EAGAIN (Resource temporarily unavailable)
+12:24:03.692239 writev(12, [{"HTTP/1.1 200 OK\r\nDate: Tue, 08 Dec 2015 09:23:46 GMT\r\nServer: Apache/2.4.10-1-beget-reuseport (Unix)\r\nX-Powered-By: PHP/5.5.30\r\nContent-Length: 78\r\nContent-Type: text/html\r\n\r\n", 175}, {"out.options[out.options.length] = new Option('\320\275\320\265\321\202 \320\263\320\276\321\200\320\276\320\264\320\276\320\262','none');\n", 78}], 2) = 253
+12:24:03.692368 write(7, "{ \"@timestamp\": \"2015-12-08T12:23:46+0300\", \"@fields\": { \"vhost\": \"rti-baltika.ru\", \"ip\": \"80.79.241.142\", \"method\": \"POST\", \"url\": \"/ajax/city.php\", \"user\": \"-\", \"status\": \"200\", \"user_agent\": \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0\", \"referer\": \"http://rti-baltika.ru/cart/\", \"bytes_sent\": \"78\" },  \"@message\": \"rti-baltika.ru 80.79.241.142 - - [08/Dec/2015:12:23:46 +0300] \\\"POST /ajax/city.php HTTP/1.1\\\" 200 78 \\\"http://rti-baltika.ru/cart/\\\" \\\"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0\\\"\" }\n", 570) = 570
+12:24:03.692448 write(8, "rti-baltika.ru 80.79.241.142 - - [08/Dec/2015:12:23:46 +0300] \"POST /ajax/city.php HTTP/1.1\" 200 78 \"http://rti-baltika.ru/cart/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0\"\n", 209) = 209
+12:24:03.692498 times({tms_utime=0, tms_stime=0, tms_cutime=0, tms_cstime=0}) = 1487297687
+12:24:03.692530 close(3)                = 0
+12:24:03.692580 poll([{fd=12, events=POLLIN}], 1, 1000) = 0 (Timeout)
+12:24:04.695468 exit_group(0)           = ?

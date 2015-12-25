@@ -1,0 +1,105 @@
+# Copyright (C) 2015 DB-table-editor
+# This file is distributed under the same license as the DB-table-editor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: DB-table-editor 1.5.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-db-table-"
+"editor\n"
+"POT-Creation-Date: 2015-11-28 18:36:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: db-table-editor.php:75
+msgid "DB-Table-Editor Cannot READ DATA SOURCE"
+msgstr ""
+
+#: db-table-editor.php:157
+msgid "Showing %d of %d rows - items with unsaved changes are not filtered"
+msgstr ""
+
+#: db-table-editor.php:158
+msgid "Are you sure you wish to remove this row"
+msgstr ""
+
+#: db-table-editor.php:159
+msgid "Delete this Row"
+msgstr ""
+
+#: db-table-editor.php:213
+msgid "No Database Table Configured to Edit"
+msgstr ""
+
+#: db-table-editor.php:225
+msgid "There are %s unsaved changes"
+msgstr ""
+
+#: db-table-editor.php:226
+msgid "Save %s Changes"
+msgstr ""
+
+#: db-table-editor.php:227
+msgid "New"
+msgstr ""
+
+#: db-table-editor.php:228
+msgid "Undo"
+msgstr ""
+
+#: db-table-editor.php:250
+msgid "Loading data..."
+msgstr ""
+
+#: db-table-editor.php:251
+msgid "Export to CSV"
+msgstr ""
+
+#: db-table-editor.php:252
+msgid "Clear Filters"
+msgstr ""
+
+#: db-table-editor.php:253
+msgid "Showing 0 of 0 rows"
+msgstr ""
+
+#: db-table-editor.php:254
+msgid "You have unsaved data, are you sure you want to quit"
+msgstr ""
+
+#: db-table-editor.php:299 db-table-editor.php:300
+msgid "DB Table Editor"
+msgstr ""
+
+#: db-table-editor.php:325
+msgid ""
+"This plugin allows viewing, editing, and exporting of database tables in "
+"your wordpress database through the admin interface.  See the %sREADME.md%s "
+"for information on configuring this plugin."
+msgstr ""
+
+#: db-table-editor.php:328
+msgid "Configured Database Tables"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "DB-table-editor"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://github.com/AcceleratioNet/wp-db-table-editor"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A plugin that adds \"tools\" pages to edit database tables"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Russ Tyndall @ Acceleration.net"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.acceleration.net"
+msgstr ""

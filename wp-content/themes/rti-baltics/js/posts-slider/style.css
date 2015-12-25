@@ -1,0 +1,70 @@
+	.posts-pager {
+		display: block;
+		position: relative;
+		height: 100%;
+	}
+	
+	.posts-pager .pager-slides {
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+		height: 100%;
+	}
+	
+	.posts-pager .pager-slides ul {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 99999px;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.posts-pager .pager-slides ul li {
+		float: left;
+		padding: 0px;
+		list-style-type: none;
+		
+	}
+	
+	.posts-pager .posts-pager-clearfix {
+		float: none !important;
+		clear: both !important;
+		height: 0 !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		border: 0 !important;
+		line-height: 0 !important;
+		list-style-type: none !important;
+	}
+	
+	.posts-pager .pager-pages ul {
+		float: right;
+	}
+	
+	.posts-pager .pager-pages li {
+		float: left;
+		list-style-type: none;
+		margin: 0px 5px;
+	}
+	
+	.posts-pager .pager-pages a{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: #900;
+	}
+	
+	
+	.posts-pager .prev-nav-link, .posts-pager .next-nav-link {
+		position: absolute;
+		top: 20px;
+		width: 10px;
+		height: 10px;
+		border: 1px solid #ddd;
+		left: 10px;
+	}
+	.posts-pager .next-nav-link {
+		left: auto;
+		right: 10px;
+	}

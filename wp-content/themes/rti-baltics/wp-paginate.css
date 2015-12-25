@@ -1,0 +1,31 @@
+.pagination {
+clear: both;
+padding: 20px 12px;
+position: relative;
+font-size: 15px;
+line-height: 20px;
+
+font-family: 'PT Sans Narrow', sans-serif;
+margin-left: 280px;
+}
+
+.pagination span, .pagination a {
+display:block;
+float:left;
+margin: 2px 8px 2px 0;
+padding:3px 0px 2px 6px;
+text-decoration:none;
+width:auto;
+}
+
+.pagination a:hover{
+	text-decoration: underline;
+}
+
+.pagination .current a{
+	text-decoration: underline;
+	font-weight: bold;
+}
+.pagination .title {
+	display: none;
+}

@@ -1,0 +1,118 @@
+<link type="text/css" href="http://test6.isite39.ru/wp-content/themes/rti-baltics/calc_deliv_cdek_js/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+<script src="http://test6.isite39.ru/wp-content/themes/rti-baltics/calc_deliv_cdek_js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="http://test6.isite39.ru/wp-content/themes/rti-baltics/calc_deliv_cdek_js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+<script src="http://test6.isite39.ru/wp-content/themes/rti-baltics/calc_deliv_cdek_js/form2js.js" type="text/javascript"></script>
+<script src="http://test6.isite39.ru/wp-content/themes/rti-baltics/calc_deliv_cdek_js/json2.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+			/**
+			 * автокомплит
+			 * подтягиваем список городов ajax`ом, данные jsonp в зависмости от введённых символов
+			 */
+			$(function() {
+				$("#city").autocomplete({
+					source : function(request, response) {
+						$.ajax({
+							url : "http://api.cdek.ru/city/getListByTerm/jsonp.php?callback=?",
+							dataType : "jsonp",
+							data : {
+								q : function() {
+									return $("#city").val()
+								},
+								name_startsWith : function() {
+									return $("#city").val()
+								}
+							},
+							success : function(data) {
+								data.geonames = data.geonames.splice(0, 4);
+								response($.map(data.geonames, function(item) {
+									return {
+										label : item.name,
+										value : item.name,
+										id : item.id
+									}
+								}));
+							}
+						});
+					},
+					minLength : 1,
+					select : function(event, ui) {
+						//console.log("Yep!");
+						$('#receiverCityId').val(ui.item.id);
+						
+						
+						console.log("Selected ");
+					}
+				});
+
+				
+			});
+</script>
+
+
+		
+
+<form id="cdek" class="shipping_calculator" action="http://test6.isite39.ru/cart/" method="post">
+
+	
+	
+	
+	
+	
+
+	<!--<section class="shipping-calculator-form">-->
+
+	
+	
+		
+	   <p class="form-row form-row-wide">
+			<input id="city" name="country" value="Москва" class="input-text ui-autocomplete-input" type="text" placeholder="Введите город" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+		</p>
+			
+				
+					<input type="hidden" name="calc_shipping_country" value="RU">
+
+			<input type="hidden" name="_wp_http_referer" value="/cart/">
+			<input name="senderCityId" value="152" hidden=""> <!-- Город-отправитель, Новосибирск -->
+			<input name="receiverCityId" id="receiverCityId" value="44" type="hidden"> <!-- Город-получатель -->
+			
+			<!-- <input name="tariffId" value="137" hidden /> --> <!-- id тарифа, Посылка склад-дверь -->
+			<input name="tariffList1" value="10" hidden="">
+			<input name="tariffList2" value="137" hidden="">
+			
+			<input name="modeId" value="2" hidden=""> <!-- режим доставки, склад-дверь -->
+			<input name="dateExecute" value="2013-10-20" hidden=""> <!-- Дата доставки -->
+			
+			<input name="weight1" value="0.036" hidden=""> <!-- Вес места, кг.  -->
+			<input name="length1" value="20" hidden=""> <!-- Длина места, см. -->
+			<input name="width1" value="20" hidden=""> <!-- Ширина места, см. -->
+			<input name="height1" value="20" hidden=""> <!-- Высота места, см. -->			
+			
+			
+			<input name="total_items" value="33" type="hidden">
+			
+	
+	
+	
+		<!--<p class="form-row form-row-wide">
+			<select name="calc_shipping_country" id="calc_shipping_country" class="country_to_state" rel="calc_shipping_state">
+				<option value="">Выберите страну&hellip;</option>
+				<option value="RU" selected='selected'>Россия</option>			</select>
+		</p>-->
+
+		<p class="form-row form-row-wide">
+			<input type="hidden" class="input-text" value="<? echo uniqid();?>" placeholder="Штат/Страна" name="calc_shipping_state" id="calc_shipping_state">
+		</p>
+
+		
+		
+			<p class="form-row form-row-wide">
+				<input type="hidden" class="input-text" value="<? echo uniqid();?>" placeholder="Почтовый индекс" name="calc_shipping_postcode" id="calc_shipping_postcode">
+			</p>
+
+		
+		<p><button type="submit" name="calc_shipping" value="1" class="button">Расчитать доставку</button></p>
+
+		<input type="hidden" id="_n" name="_n" value="f44fba8ec0"><input type="hidden" name="_wp_http_referer" value="/cart/">	<!--</section>-->
+</form>

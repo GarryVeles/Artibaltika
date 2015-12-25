@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="http://ekimoff.ru/wp-content/themes/yomel/style.css?v=3" rel="stylesheet" type="text/css" media="all" />
+	<title>Пример загрузки городов через AJAX</title>
+</head>
+<body>
+	<div id="content">
+	
+			<script type="text/javascript" src="jquery.js"></script>
+			<script type="text/javascript">
+			function getList(type, obj) {
+				$('#loading_' + type).show();
+				$.post('/ajax/city.php', {type: type, id: $('#'+obj).val()}, onAjaxSuccess);
+				function onAjaxSuccess(data) {
+			        	out = document.getElementById(type);
+			 			for (var i = out.length - 1; i >= 0; i--) {
+			      			out.options[i] = null;
+			 			}
+			        	eval(data);
+			        	$('#loading_' + type).hide();
+				}
+			}
+			</script>
+			
+			<h1>Пример загрузки городов через AJAX</h1>
+			
+			<div>страна</div>
+			<div>
+		   		<select name="countryid" id="country" onchange="getList('region', 'country')" style="width:300px;">
+		   		    		   		     
+		   		    		   		         <option value="245">Армения</option>
+		   		    		   		         <option value="248">Беларусь</option>
+		   		    		   				  <option value="1894">Казахстан</option>
+		   		    		   		       	<option value="3159" selected="selected">Россия</option>
+		   		    		   		     </select>
+			</div>	
+			
+			<div>регион</div>
+			<div style="display: none" id="loading_region"><img alt="" src="img/ajax_loader.gif" />Загрузка...</div>
+			<div>
+
+		   		<select name="regionid" id="region" onchange="getList('city', 'region')" style="width:300px;">
+		   		    		   		         <option value="1998532">Адыгея</option>
+		   		    		   		         <option value="3160">Алтайский край</option>
+		   		    		   		         <option value="3223">Амурская обл.</option>
+		   		    		   		         <option value="3251">Архангельская обл.</option>
+		   		    		   		         <option value="3282">Астраханская обл.</option>
+		   		    		   		         <option value="3296">Башкортостан(Башкирия)</option>
+		   		    		   		         <option value="3352">Белгородская обл.</option>
+		   		    		   		         <option value="3371">Брянская обл.</option>
+		   		    		   		         <option value="3407">Бурятия</option>
+		   		    		   		         <option value="3437">Владимирская обл.</option>
+		   		    		   		         <option value="3468">Волгоградская обл.</option>
+		   		    		   		         <option value="3503">Вологодская обл.</option>
+		   		    		   		         <option value="3529">Воронежская обл.</option>
+		   		    		   		         <option value="3630">Дагестан</option>
+		   		    		   		         <option value="3673">Еврейская обл.</option>
+		   		    		   		         <option value="3675">Ивановская обл.</option>
+		   		    		   		         <option value="3703">Иркутская обл.</option>
+		   		    		   		         <option value="3751">Кабардино-Балкария</option>
+		   		    		   		         <option value="3761">Калининградская обл.</option>
+		   		    		   		         <option value="3827">Калмыкия</option>
+		   		    		   		         <option value="3841">Калужская обл.</option>
+		   		    		   		         <option value="3872">Камчатская обл.</option>
+		   		    		   		         <option value="3892">Карелия</option>
+		   		    		   		         <option value="3921">Кемеровская обл.</option>
+		   		    		   		         <option value="3952">Кировская обл.</option>
+		   		    		   		         <option value="3994">Коми</option>
+		   		    		   		         <option value="4026">Костромская обл.</option>
+		   		    		   		         <option value="4052">Краснодарский край</option>
+		   		    		   		         <option value="4105">Красноярский край</option>
+		   		    		   		         <option value="4176">Курганская обл.</option>
+		   		    		   		         <option value="4198">Курская обл.</option>
+		   		    		   		         <option value="4925">Ленинградская обл.</option>
+		   		    		   		         <option value="4227">Липецкая обл.</option>
+		   		    		   		         <option value="4243">Магаданская обл.</option>
+		   		    		   		         <option value="4270">Марий Эл</option>
+		   		    		   		         <option value="4287">Мордовия</option>
+		   		    		   		         <option value="4312" selected="selected">Москва и Московская обл.</option>
+		   		    		   		         <option value="4481">Мурманская обл.</option>
+		   		    		   		         <option value="3563">Нижегородская обл.</option>
+		   		    		   		         <option value="4503">Новгородская обл.</option>
+		   		    		   		         <option value="4528">Новосибирская обл.</option>
+		   		    		   		         <option value="4561">Омская обл.</option>
+		   		    		   		         <option value="4593">Оренбургская обл.</option>
+		   		    		   		         <option value="4633">Орловская обл.</option>
+		   		    		   		         <option value="4657">Пензенская обл.</option>
+		   		    		   		         <option value="4689">Пермская обл.</option>
+		   		    		   		         <option value="4734">Приморский край</option>
+		   		    		   		         <option value="4773">Псковская обл.</option>
+		   		    		   		         <option value="4800">Ростовская обл.</option>
+		   		    		   		         <option value="4861">Рязанская обл.</option>
+		   		    		   		         <option value="4891">Самарская обл.</option>
+		   		    		   		         <option value="4969">Саратовская обл.</option>
+		   		    		   		         <option value="5011">Саха (Якутия)</option>
+		   		    		   		         <option value="5052">Сахалин</option>
+		   		    		   		         <option value="5080">Свердловская обл.</option>
+		   		    		   		         <option value="5151">Северная Осетия</option>
+		   		    		   		         <option value="5161">Смоленская обл.</option>
+		   		    		   		         <option value="5191">Ставропольский край</option>
+		   		    		   		         <option value="5225">Тамбовская обл.</option>
+		   		    		   		         <option value="5246">Татарстан</option>
+		   		    		   		         <option value="3784">Тверская обл.</option>
+		   		    		   		         <option value="5291">Томская обл.</option>
+		   		    		   		         <option value="5326">Тульская обл.</option>
+		   		    		   		         <option value="5312">Тыва (Тувинская Респ.)</option>
+		   		    		   		         <option value="5356">Тюменская обл.</option>
+		   		    		   		         <option value="5404">Удмуртия</option>
+		   		    		   		         <option value="5432">Ульяновская обл.</option>
+		   		    		   		         <option value="5473">Хабаровский край</option>
+		   		    		   		         <option value="2316497">Хакасия</option>
+		   		    		   		         <option value="2499002">Ханты-Мансийский АО</option>
+		   		    		   		         <option value="5507">Челябинская обл.</option>
+		   		    		   		         <option value="5543">Чечено-Ингушетия</option>
+		   		    		   		         <option value="5555">Читинская обл.</option>
+		   		    		   		         <option value="5600">Чувашия</option>
+		   		    		   		         <option value="2415585">Чукотский АО</option>
+		   		    		   		         <option value="5019394">Ямало-Ненецкий АО</option>
+		   		    		   		         <option value="5625">Ярославская обл.</option>
+
+		   		    		   		</select>
+			</div>
+
+			<div>город</div>
+			<div style="display: none" id="loading_city"><img alt="" src="/img/ajax_loader.gif" />Загрузка...</div>
+			<div>
+		   		<select name="city_id" id="city" style="width:300px;">
+		   		    		   		         <option value="4313">Абрамцево</option>
+		   		    		   		         <option value="4314">Алабино</option>
+		   		    		   		         <option value="4315">Апрелевка</option>
+		   		    		   		         <option value="4316">Архангельское</option>
+		   		    		   		         <option value="4317">Ашитково</option>
+		   		    		   		         <option value="7592923">Байконур</option>
+		   		    		   		         <option value="4318">Бакшеево</option>
+		   		    		   		         <option value="4319">Балашиха</option>
+		   		    		   		         <option value="4320">Барыбино</option>
+		   		    		   		         <option value="4321">Белоомут</option>
+		   		    		   		         <option value="4322">Белые Столбы</option>
+		   		    		   		         <option value="4323">Бородино</option>
+		   		    		   		         <option value="4324">Бронницы</option>
+		   		    		   		         <option value="4325">Быково</option>
+		   		    		   		         <option value="4326">Валуево</option>
+		   		    		   		         <option value="4327">Вербилки</option>
+		   		    		   		         <option value="4328">Верея</option>
+		   		    		   		         <option value="4329">Видное</option>
+		   		    		   		         <option value="4330">Внуково</option>
+		   		    		   		         <option value="4331">Вождь Пролетариата</option>
+		   		    		   		         <option value="4332">Волоколамск</option>
+		   		    		   		         <option value="4333">Вороново</option>
+		   		    		   		         <option value="4334">Воскресенск</option>
+		   		    		   		         <option value="4335">Восточный</option>
+		   		    		   		         <option value="4336">Востряково</option>
+		   		    		   		         <option value="4337">Высоковск</option>
+		   		    		   		         <option value="4338">Голицино</option>
+		   		    		   		         <option value="4339">Деденево</option>
+		   		    		   		         <option value="4340">Дедовск</option>
+		   		    		   		         <option value="4341">Джержинский</option>
+		   		    		   		         <option value="4342">Дмитров</option>
+		   		    		   		         <option value="4343">Долгопрудный</option>
+		   		    		   		         <option value="4344">Домодедово</option>
+		   		    		   		         <option value="4345">Дорохово</option>
+		   		    		   		         <option value="4346">Дрезна</option>
+		   		    		   		         <option value="4347">Дубки</option>
+		   		    		   		         <option value="4348">Дубна</option>
+		   		    		   		         <option value="4349">Егорьевск</option>
+		   		    		   		         <option value="4350">Железнодорожный</option>
+		   		    		   		         <option value="4351">Жилево</option>
+		   		    		   		         <option value="4352">Жуковский</option>
+		   		    		   		         <option value="4353">Загорск</option>
+		   		    		   		         <option value="4354">Загорянский</option>
+		   		    		   		         <option value="4355">Запрудная</option>
+		   		    		   		         <option value="4356">Зарайск</option>
+		   		    		   		         <option value="4357">Звенигород</option>
+		   		    		   		         <option value="4358">Зеленоград</option>
+		   		    		   		         <option value="4359">Ивантеевка</option>
+		   		    		   		         <option value="4360">Икша</option>
+		   		    		   		         <option value="4361">Ильинский</option>
+		   		    		   		         <option value="4362">Истра</option>
+		   		    		   		         <option value="4363">Калининград</option>
+		   		    		   		         <option value="4364">Кашира</option>
+		   		    		   		         <option value="4365">Керва</option>
+		   		    		   		         <option value="4366">Климовск</option>
+		   		    		   		         <option value="4367">Клин</option>
+		   		    		   		         <option value="4368">Клязьма</option>
+		   		    		   		         <option value="4369">Кожино</option>
+		   		    		   		         <option value="4370">Кокошкино</option>
+		   		    		   		         <option value="4371">Коломна</option>
+		   		    		   		         <option value="4372">Колюбакино</option>
+		   		    		   		         <option value="3118538">Королев</option>
+		   		    		   		         <option value="4373">Косино</option>
+		   		    		   		         <option value="4374">Котельники</option>
+		   		    		   		         <option value="4375">Красково</option>
+		   		    		   		         <option value="4376">Красноармейск</option>
+		   		    		   		         <option value="4377">Красногорск</option>
+		   		    		   		         <option value="4378">Краснозаводск</option>
+		   		    		   		         <option value="7593075">Краснознаменск</option>
+		   		    		   		         <option value="4379">Красный Ткач</option>
+		   		    		   		         <option value="4380">Крюково</option>
+		   		    		   		         <option value="4381">Кубинка</option>
+		   		    		   		         <option value="4382">Купавна</option>
+		   		    		   		         <option value="4383">Куровское</option>
+		   		    		   		         <option value="4384">Лесной Городок</option>
+		   		    		   		         <option value="4385">Ликино-Дулево</option>
+		   		    		   		         <option value="4386">Лобня</option>
+		   		    		   		         <option value="4387">Лопатинский</option>
+		   		    		   		         <option value="4388">Лосино-Петровский</option>
+		   		    		   		         <option value="4389">Лотошино</option>
+		   		    		   		         <option value="4390">Лукино</option>
+		   		    		   		         <option value="4391">Луховицы</option>
+		   		    		   		         <option value="4392">Лыткарино</option>
+		   		    		   		         <option value="4393">Львовский</option>
+		   		    		   		         <option value="4394">Люберцы</option>
+		   		    		   		         <option value="4395">Малаховка</option>
+		   		    		   		         <option value="4396">Михайловское</option>
+		   		    		   		         <option value="4397">Михнево</option>
+		   		    		   		         <option value="4398">Можайск</option>
+		   		    		   		         <option value="4399">Монино</option>
+		   		    		   		         <option value="4400" selected="selected">Москва</option>
+		   		    		   		         <option value="4401">Муханово</option>
+		   		    		   		         <option value="4402">Мытищи</option>
+		   		    		   		         <option value="4403">Нарофоминск</option>
+		   		    		   		         <option value="4404">Нахабино</option>
+		   		    		   		         <option value="4405">Некрасовка</option>
+		   		    		   		         <option value="4406">Немчиновка</option>
+		   		    		   		         <option value="4407">Новобратцевский</option>
+		   		    		   		         <option value="4408">Новоподрезково</option>
+		   		    		   		         <option value="4409">Ногинск</option>
+		   		    		   		         <option value="4410">Обухово</option>
+		   		    		   		         <option value="4411">Одинцово</option>
+		   		    		   		         <option value="4412">Ожерелье</option>
+		   		    		   		         <option value="4413">Озеры</option>
+		   		    		   		         <option value="4414">Октябрьский</option>
+		   		    		   		         <option value="4415">Опалиха</option>
+		   		    		   		         <option value="4416">Орехово-Зуево</option>
+		   		    		   		         <option value="4417">Павловский Посад</option>
+		   		    		   		         <option value="4418">Первомайский</option>
+		   		    		   		         <option value="4419">Пески</option>
+		   		    		   		         <option value="4420">Пироговский</option>
+		   		    		   		         <option value="4421">Подольск</option>
+		   		    		   		         <option value="4422">Полушкино</option>
+		   		    		   		         <option value="4423">Правдинский</option>
+		   		    		   		         <option value="4424">Привокзальный</option>
+		   		    		   		         <option value="4425">Пролетарский</option>
+		   		    		   		         <option value="3138841">Протвино</option>
+		   		    		   		         <option value="4426">Пушкино</option>
+		   		    		   		         <option value="4427">Пущино</option>
+		   		    		   		         <option value="4428">Радовицкий</option>
+		   		    		   		         <option value="4429">Раменское</option>
+		   		    		   		         <option value="4430">Реутов</option>
+		   		    		   		         <option value="4431">Решетниково</option>
+		   		    		   		         <option value="4432">Родники</option>
+		   		    		   		         <option value="4433">Рошаль</option>
+		   		    		   		         <option value="4434">Рублево</option>
+		   		    		   		         <option value="4435">Руза</option>
+		   		    		   		         <option value="4436">Салтыковка</option>
+		   		    		   		         <option value="4437">Северный</option>
+		   		    		   		         <option value="4438">Сергиев Посад</option>
+		   		    		   		         <option value="4439">Серебряные Пруды</option>
+		   		    		   		         <option value="4440">Серпухов</option>
+		   		    		   		         <option value="4441">Солнечногорск</option>
+		   		    		   		         <option value="4442">Солнцево</option>
+		   		    		   		         <option value="4443">Софрино</option>
+		   		    		   		         <option value="4444">Старая Купавна</option>
+		   		    		   		         <option value="4445">Старбеево</option>
+		   		    		   		         <option value="4446">Ступино</option>
+		   		    		   		         <option value="4447">Сходня</option>
+		   		    		   		         <option value="4448">Талдом</option>
+		   		    		   		         <option value="4449">Текстильщик</option>
+		   		    		   		         <option value="4450">Темпы</option>
+		   		    		   		         <option value="4451">Тишково</option>
+		   		    		   		         <option value="4452">Томилино</option>
+		   		    		   		         <option value="4453">Троицк</option>
+		   		    		   		         <option value="4454">Туголесский Бор</option>
+		   		    		   		         <option value="4455">Тучково</option>
+		   		    		   		         <option value="4456">Уваровка</option>
+		   		    		   		         <option value="4457">Удельная</option>
+		   		    		   		         <option value="4458">Успенское</option>
+		   		    		   		         <option value="4459">Фирсановка</option>
+		   		    		   		         <option value="4460">Фосфоритный</option>
+		   		    		   		         <option value="4461">Фрязино</option>
+		   		    		   		         <option value="4462">Фряново</option>
+		   		    		   		         <option value="4463">Химки</option>
+		   		    		   		         <option value="4464">Хорлово</option>
+		   		    		   		         <option value="4465">Хотьково</option>
+		   		    		   		         <option value="4466">Черкизово</option>
+		   		    		   		         <option value="4467">Черноголовка</option>
+		   		    		   		         <option value="4468">Черусти</option>
+		   		    		   		         <option value="4469">Чехов</option>
+		   		    		   		         <option value="4470">Шарапово</option>
+		   		    		   		         <option value="4471">Шатура</option>
+		   		    		   		         <option value="4472">Шатурторф</option>
+		   		    		   		         <option value="4473">Шаховская</option>
+		   		    		   		         <option value="4474">Шереметьевский</option>
+		   		    		   		         <option value="4475">Щелково</option>
+		   		    		   		         <option value="4476">Щербинка</option>
+		   		    		   		         <option value="4477">Электрогорск</option>
+		   		    		   		         <option value="4478">Электросталь</option>
+		   		    		   		         <option value="4479">Электроугли</option>
+		   		    		   		         <option value="4480">Яхрома</option>
+		   		    		   		</select>
+			</div>	
+			
+		
+	</div>
+</body>
+</html>
